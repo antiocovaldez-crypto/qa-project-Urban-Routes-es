@@ -1,0 +1,47 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from Home.HomePageMethods import MethodsHomePage
+from Flash.FlashPageMethods import MethodsFlashPage
+from Comfort.ComfortPageMethods import MethodsComfortPage
+from Message.MessagePageMethods import MethodsMessagePage
+from Blanket_Tissues.BTPageMethods import MethodsBTPage
+
+from selenium import webdriver
+import data
+
+class TestBTPage:
+    driver = None
+
+    @classmethod
+    def setup_class(cls):
+        cls.driver = webdriver.Chrome()
+        cls.driver.get(data.urban_routes_url)
+
+    def test_BT_toggle(self):
+        home_page = MethodsHomePage(self.driver)
+        home_page.set_route(data.address_from, data.address_to)
+
+        flash_page = MethodsFlashPage(self.driver)
+        flash_page.click_flash_button()
+        flash_page.click_order_taxi_button()
+
+        comfort_page = MethodsComfortPage(self.driver)
+        comfort_page.click_comfort_button()
+
+        message_page = MethodsMessagePage(self.driver)
+        message_page.fill_message(data.message_for_driver)
+
+        bt_page = MethodsBTPage(self.driver)
+        bt_page.click_blanket_and_tissues_toggle()
+
+        ice_cream_page = MethodsBTPage(self.driver)
+        ice_cream_page.click_ice_cream_button_twice()
+
+    @classmethod
+    def teardown_class(cls):
+        cls.driver.quit()
+
+
+

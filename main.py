@@ -52,8 +52,10 @@ class UrbanRoutesPage:
 
     def get_to(self):
         return self.driver.find_element(*self.to_field).get_property('value')
-
-
+#Sugerido por Dot
+    def set_route(self, from_address, to_address):
+        self.set_from(from_address)
+        self.set_to(to_address)
 
 class TestUrbanRoutes:
 
