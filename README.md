@@ -1,11 +1,9 @@
-Proyecto Urban Routes - Automatización de Pruebas
+🚗**Proyecto Urban Routes - Automatización de Pruebas**
 
-Descripción del Proyecto
-
+🚙**Descripción del Proyecto**
 Este proyecto contiene pruebas automatizadas para la aplicación web Urban Routes, que simula el flujo completo de un usuario solicitando un taxi. Las pruebas cubren desde la configuración de la ruta hasta la confirmación final de la reservacion, incluyendo la selección de tarifa, métodos de pago, y opciones adicionales.
 
-Funcionalidades Probadas
-
+🚌**Funcionalidades Probadas**
 - Configuración de ruta (dirección de origen y destino)
 - Selección de modalidad Flash
 - Pedir taxi
@@ -19,22 +17,20 @@ Funcionalidades Probadas
 - Modal de temporizador "Buscar automovil"
 - Confirmación final de la reserva en modal "El conductor llegara en "X" min"
 
-Tecnologías y Técnicas Utilizadas
-
-Tecnologías:
+🏍**Tecnologías Usadas**
 - Python 3.x: Lenguaje de programación principal
 - Selenium WebDriver: Automatización del navegador web
 - PyTest: Framework de pruebas
 - Chrome WebDriver: Driver para navegador Chrome
 
-Técnicas de Testing:
+🏎**Técnicas de Testing Utilizadas**
 - Page Object Model (POM): Patrón de diseño para organizar el código
 - Localizadores múltiples: ID, Class Name, XPath, CSS Selectors
 - Esperas explícitas: WebDriverWait y Expected Conditions
 - Assertions: Verificación de resultados esperados
 - Modularización: Separación de métodos, localizadores y datos de prueba
 
-Estructura del Proyecto
+🚲**Estructura del Proyecto**
 
 qa-project-Urban-Routes-es/   
 ├── Home/                    # Configuración de ruta   
